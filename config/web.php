@@ -14,6 +14,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules'=>array(
+                '/'=>'index/index',
                 'contact-us'=>'index/contact',
                 'about-us'  =>'index/about',
                 'articles'  =>'index/articles',
