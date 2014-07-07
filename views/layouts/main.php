@@ -83,9 +83,11 @@ use yii\helpers\Html;
             </ul>
         </aside>
         <section id="content">
+            <?php if(Yii::$app->request->url != '/p-cabinet'):?>
             <div id="banner">
                 <h2>Professional <span>Online Education <span>Since 1992</span></span></h2>
             </div>
+            <?php endif;?>
             <div class="inside">
 
                 <?php echo $content; ?>

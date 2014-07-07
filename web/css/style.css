@@ -545,3 +545,23 @@ a {
     border:1px solid #008cc4;
     border-radius: 5px;
 }
+/*form login*/
+.form-login{
+    width:70%;
+    border:1px solid grey;
+    border-radius: 5px;
+}
+.form-login div{
+    margin: 20px 5px;
+}
+.form-login input[name=login],.form-login input[name=pass]{
+    width:180px;
+    height:24px;
+    float:right;
+    border:1px solid grey;
+    border-radius: 5px;
+    clear: both;
+    padding-left:5px;
+    margin: -5px 50px 0 0;
+}
+
