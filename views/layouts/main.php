@@ -30,24 +30,18 @@ use yii\widgets\SimpleMenu;
     <header>
         <div class="container">
             <h1><a href="#"></a></h1>
-            <?=SimpleMenu::widget([
-                'item'=>[
-                    ['name'=>'Home Page','url'=>'index/index','class'=>'m1'],
-                    ['name'=>'About Us','url'=>'index/about','class'=>'m1'],
-                    ['name'=>'Our Articles','url'=>'index/articles','class'=>'m1'],
-                    ['name'=>'Contact Us','url'=>'index/contact','class'=>'m1'],
 
-                ]
-            ])?>
 
             <nav>
-                <ul>
-                    <li class="current"><a href="/" class="m1">Home Page</a></li>
-                    <li><a href="/about-us" class="m1">About Us</a></li>
-                    <li><a href="/articles" class="m1">Our Articles</a></li>
-                    <li><a href="/contact-us" class="m1">Contact Us</a></li>
-                    <li class="last"><a href="/p-cabinet" class="m1">Personal Cabinet</a></li>
-                </ul>
+                <?=SimpleMenu::widget([
+                    'item'=>[
+                        ['name'=>'Home Page','url'=>'index/index','class'=>'m1'],
+                        ['name'=>'About Us','url'=>'index/about','class'=>'m1'],
+                        ['name'=>'Our Articles','url'=>'index/articles','class'=>'m1'],
+                        ['name'=>'Contact Us','url'=>'index/contact','class'=>'m1'],
+                        ['name'=>'Personal Cabinet','url'=>'index/personal-cabinet','class'=>'m1'],
+                    ]
+                ])?>
             </nav>
             <form action="#" id="search-form">
                 <fieldset>

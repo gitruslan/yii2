@@ -20,9 +20,10 @@ class SimpleMenu extends Widget{
     protected $items = [];
     protected $filters = ['{class}','{name}','{url}','{active}'];
 
+
     public function run(){
       $this->route = Yii::$app->controller->getRoute();
-      exit(print_r($this->reInitItems()));
+      return  HTML::tag("ul",$this->reInitItems());
     }
 
     protected function reInitItems(){
@@ -31,9 +32,10 @@ class SimpleMenu extends Widget{
          if($this->route == $it['url']){
             $temp_t = str_ireplace('{active}',$this->activeClass,$temp_t);
          }
-         $this->items[] = str_ireplace($this->filters,[$it['class'],$it['name'],$it['url'],''],$temp_t);
+         $this->items[] =
+             str_ireplace($this->filters,[$it['class'],$it['name'],Url::toRoute($it['url']),''],$temp_t);
 
       }
-      return $this->items;
+      return implode(' ',$this->items);
     }
 }
